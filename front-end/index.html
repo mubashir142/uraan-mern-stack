@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uraan - Login / Sign Up</title>
+  <link rel="stylesheet" href="uraan.css">
+</head>
+<body>
+  <div class="auth-container">
+    <!-- Login Form -->
+    <div id="loginForm" class="form-container">
+      <h2>Login Uraan</h2>
+      <form>
+        <div class="input-field">
+          <label for="email">Email</label>
+          <input type="email" id="loginEmail" placeholder="Enter your email" required>
+        </div>
+        <div class="input-field">
+          <label for="password">Password</label>
+          <input type="password" id="loginPassword" placeholder="Enter your password" required>
+        </div>
+        <button type="submit">Login</button>
+        <div class="options">
+          <p>Don't have an account? <a href="#" id="showSignup">Create Account</a></p>
+        </div>
+      </form>
+    </div>
+
+    <!-- Signup Form (Initially Hidden) -->
+    <div id="signupForm" class="form-container hidden">
+      <h2>Create Account</h2>
+      <form>
+        <div class="input-field">
+          <label for="name">Name</label>
+          <input type="text" id="signupName" placeholder="Enter your name" required>
+        </div>
+        <div class="input-field">
+          <label for="email">Email</label>
+          <input type="email" id="signupEmail" placeholder="Enter your email" required>
+        </div>
+        <div class="input-field">
+          <label for="password">Password</label>
+          <input type="password" id="signupPassword" placeholder="Create a password" required>
+        </div>
+        <div class="input-field">
+          <label for="role">Select Role</label>
+          <select id="signupRole" required>
+            <option value="guest">Guest</option>
+            <option value="student">Student</option>
+            <option value="teacher">Teacher</option>
+            <option value="controller">Controller</option>
+          </select>
+        </div>
+        <button type="submit">Sign Up</button>
+        <div class="options">
+          <p>Already have an account? <a href="#" id="showLogin">Login</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="uraan.js"></script>
+  <script src="server.js"></script>
+</body>
+</html>
